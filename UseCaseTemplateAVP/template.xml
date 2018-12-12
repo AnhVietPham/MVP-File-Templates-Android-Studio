@@ -1,0 +1,23 @@
+<template format="4"
+		revision="1"
+		name="MVP UseCase Template"
+		description="Creates a new UseCase (Input: UseCase name, Output: file UseCase, file UseCaseInput, file UseCaseOutput, file UseCaseFailOuput)">
+
+	<category value="Other"/>
+
+	<parameter id="className"
+		name="Functionality Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="DomainAVP"
+		help="The name of the functionality that requires Use Case"/>
+
+	<parameter
+		id="isUseCaseOutput"
+		name="Create UseCaseOutput"
+		type="boolean"
+		default="false"/>
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
